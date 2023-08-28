@@ -112,7 +112,7 @@ int main(void){
 	while (!_msc_ctx.drive_acknowledged){
 		tight_loop_contents();
 	}
-	usb_hid_keyboard_type_keys(USB_ENDPOINT_INDEX(2,0),"Drive mounted!",0);
+	usb_hid_keyboard_type_keys(USB_ENDPOINT_INDEX(2,0),"Drive mounted!",8);
 	while (1){
 		tight_loop_contents();
 	}
