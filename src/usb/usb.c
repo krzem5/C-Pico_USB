@@ -151,7 +151,7 @@ static void _usb_irq(void){
 				else{
 					index--;
 					const char* str=(index>=_usb_device.string_table_length?"???":_usb_device.config->string_table[index]);
-					while (*str&&length<64){
+					while (*str&&length<128){
 						_usb_device_ep0_buffer[length]=*str;
 						_usb_device_ep0_buffer[length+1]=0;
 		 				str++;
